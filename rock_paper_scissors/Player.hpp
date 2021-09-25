@@ -1,7 +1,7 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include "Choice.hpp";
+#include "Choice.hpp"
 
 class Player {
   public:

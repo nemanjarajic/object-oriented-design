@@ -1,5 +1,5 @@
 
-#include <HumanPlayer.hpp>
+#include "HumanPlayer.hpp"
 #include <iostream>
 #include <string>
 #include <stdlib.h>

@@ -1,9 +1,9 @@
 #ifndef GAME_H
 #define GAME_H
 
-#include <Player.hpp>
-#include <HumanPlayer.hpp>
-#include <ComputerPlayer.hpp>
+#include "Player.hpp"
+#include "HumanPlayer.hpp"
+#include "ComputerPlayer.hpp"
 
 class Game {
   public:

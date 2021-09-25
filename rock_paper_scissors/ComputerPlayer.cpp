@@ -1,4 +1,4 @@
-#include <ComputerPlayer.hpp>
+#include "ComputerPlayer.hpp"
 #include <stdlib.h>
 
 Choice ComputerPlayer::makeChoice() {
