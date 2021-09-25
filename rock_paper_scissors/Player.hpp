@@ -7,7 +7,7 @@ class Player {
   public:
     virtual Choice makeChoice();
     virtual string getName();
-    virtual Player(string name);
+    Player(string name);
   private:
       string name;
 };

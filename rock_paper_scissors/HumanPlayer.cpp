@@ -2,6 +2,7 @@
 #include <HumanPlayer.hpp>
 #include <iostream>
 #include <string>
+#include <cstring>
 #include <stdlib.h>
 
 HumanPlayer::HumanPlayer(string name) {
@@ -18,5 +19,9 @@ Choice HumanPlayer::makeChoice() {
 }
 
 string HumanPlayer::getName() {
-    return "Human Player name: " + name;
+    if (strlen(name) > 0) {
+        return name;
+    } else {
+        return "Human";
+    }
 }

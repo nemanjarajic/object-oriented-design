@@ -1,5 +1,6 @@
 #include <ComputerPlayer.hpp>
 #include <stdlib.h>
+#include <cstring>
 
 ComputerPlayer::ComputerPlayer(string name) {
     this->name = name;
@@ -10,5 +11,10 @@ Choice ComputerPlayer::makeChoice() {
 }
 
 string ComputerPlayer::getName() {
-    return "Computer Player name: " + name;
+    if (strlen(name) > 0) {
+        return name;
+    }
+    else {
+        return "Computer";
+    }
 }
