@@ -2,26 +2,21 @@
 #include <HumanPlayer.hpp>
 #include <iostream>
 #include <string>
-#include <cstring>
 #include <stdlib.h>
 
-HumanPlayer::HumanPlayer(string name) {
-    this->name = name;
-}
+using namespace std;
 
 Choice HumanPlayer::makeChoice() {
-    // Prompt the human player for each round’s choice of rock, paper, or scissors.
+    // Prompt the human player for each roundï¿½s choice of rock, paper, or scissors.
     // 'Choice' enum: ROCK = 0, PAPER = 1, SCISSORS = 2
     int c = 0;
-    std::cout << "Enter your choice as a number (ROCK = 0, PAPER = 1, SCISSORS = 2) here: " << std::endl;
-    std::cin >> c;
+    do {
+        cout << "Enter your choice as a number (ROCK = 0, PAPER = 1, SCISSORS = 2) here: " << endl;
+        cin >> c;
+    } while (c < 0 || c > 2);
     return Choice(c);
 }
 
 string HumanPlayer::getName() {
-    if (strlen(name) > 0) {
-        return name;
-    } else {
-        return "Human";
-    }
+    return "Human";
 }

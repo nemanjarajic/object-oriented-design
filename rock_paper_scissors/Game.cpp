@@ -5,7 +5,6 @@ using namespace std;
 
 Game::Game(Player& p1, Player& p2) 
     : p1(p1), p2(p2) {
-
 }
 
 void Game::start() {
@@ -15,7 +14,7 @@ void Game::start() {
     cout << "Player 2 is " << p2.getName() << endl;
     cout << "++++++++++++++++++++++++++" << endl;
     for (int i = 1; i <= 20; i++) {
-        cout << "======== Turn " << setfill('0') << setw(2) << i << " =========" << endl;
+        cout << "======== Round " << setfill('0') << setw(2) << i << " ========" << endl;
         Choice choice1 = p1.makeChoice();
         Choice choice2 = p2.makeChoice();
         cout << "Player 1 choose " << choice1 << endl;
