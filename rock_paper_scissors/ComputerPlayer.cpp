@@ -4,3 +4,7 @@
 Choice ComputerPlayer::makeChoice() {
     return Choice(rand() % 3);
 }
+
+string ComputerPlayer::getName() {
+    return "Computer";
+}
