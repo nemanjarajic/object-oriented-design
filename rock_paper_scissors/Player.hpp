@@ -6,6 +6,7 @@
 class Player {
   public:
     virtual Choice makeChoice();
+    virtual string getName();
 };
 
 #endif

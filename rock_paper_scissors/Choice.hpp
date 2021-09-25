@@ -27,4 +27,10 @@ inline ostream& operator << (ostream& ofs, Choice choice) {
     return ofs;
 }
 
+inline bool operator > (Choice choice1, Choice choice2) {
+    if (choice1 == ROCK)    return choice2 == SCISSORS;
+    if (choice1 == PAPER)   return choice2 == ROCK;
+    return choice2 == PAPER;
+}
+
 #endif

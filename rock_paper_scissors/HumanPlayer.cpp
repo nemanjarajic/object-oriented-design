@@ -3,3 +3,7 @@
 Choice HumanPlayer::makeChoice() {
     
 }
+
+string HumanPlayer::getName() {
+    return "Human";
+}
