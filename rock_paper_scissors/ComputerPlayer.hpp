@@ -5,7 +5,7 @@
 
 class ComputerPlayer : public Player {
   public:
-
+    virtual Choice makeChoice();
 };
 
 #endif

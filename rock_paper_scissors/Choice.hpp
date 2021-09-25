@@ -6,7 +6,7 @@
 
 using namespace std;
 
-enum class Choice {
+enum Choice {
     ROCK,
     PAPER,
     SCISSORS,
@@ -14,13 +14,13 @@ enum class Choice {
 
 inline ostream& operator << (ostream& ofs, Choice choice) {
     switch(choice) {
-        case Choice::ROCK: 
+        case ROCK: 
             ofs << "Rock";
             break;
-        case Choice::PAPER: 
+        case PAPER: 
             ofs << "Paper";
             break;
-        case Choice::SCISSORS: 
+        case SCISSORS: 
             ofs << "Scissors";
             break;
     }
