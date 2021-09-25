@@ -7,6 +7,9 @@ class ComputerPlayer : public Player {
   public:
     virtual Choice makeChoice();
     virtual string getName();
+    virtual ComputerPlayer(string name);
+  private:
+      string name;
 };
 
 #endif
