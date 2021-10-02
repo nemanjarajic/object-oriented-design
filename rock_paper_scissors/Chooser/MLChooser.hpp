@@ -15,6 +15,7 @@ class MLChooser : public Chooser {
   private:
     string curSequence;
     void initFrequencyMap(int n, string sequence);
+    void loadFile();
 
 };
 

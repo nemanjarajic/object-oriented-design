@@ -1,9 +1,11 @@
 #include "MLChooser.hpp"
+#include <fstream>
 
 string MLChooser::NAME = "ML";
 
 MLChooser::MLChooser() {
     initFrequencyMap(5, "");
+    loadFile();
 }
 
 Choice MLChooser::makeChoice() {
@@ -39,7 +41,20 @@ void MLChooser::feedOpponentChoice(Choice choice) {
 }
 
 void MLChooser::postGame() {
-
+    ofstream ofs("previous_choices.txt");
+    if(ofs.fail()) {
+        cout << "Failed to create previous choices file" << endl;
+        exit(1);
+    }
+    string sequence;
+    string last;
+    int freq;
+    for (const auto &pair1 : frequency) {
+        for (const auto &pair2 : pair1.second) {
+            ofs << pair1.first + pair2.first << ": " << pair2.second <<"\n";
+        }
+    }
+    ofs.close();
 }
 
 void MLChooser::initFrequencyMap(int n, string sequence) {
@@ -56,3 +71,21 @@ void MLChooser::initFrequencyMap(int n, string sequence) {
     initFrequencyMap(n - 1, sequence + toOneChar(SCISSORS));
 }
 
+void MLChooser::loadFile() {
+    ifstream ifs("previous_choices.txt");
+    if(ifs.fail()) {
+        cout << "Failed to open previous choices file" << endl;
+        return;
+    }
+    string sequence;
+    string last;
+    int freq;
+    while(!ifs.eof()) {
+        ifs >> sequence >> freq;
+        sequence.pop_back();
+        last = sequence.back();
+        sequence.pop_back();
+        frequency[sequence][last] = freq;
+    }
+    ifs.close();
+}
