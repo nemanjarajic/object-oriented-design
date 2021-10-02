@@ -11,3 +11,11 @@ Choice ComputerPlayer::makeChoice() {
 string ComputerPlayer::getName() {
     return "Computer";
 }
+
+void ComputerPlayer::feedOpponentChoice(Choice choice) {
+    chooser->feedOpponentChoice(choice);
+}
+
+void ComputerPlayer::postGame() {
+    chooser->postGame();
+}

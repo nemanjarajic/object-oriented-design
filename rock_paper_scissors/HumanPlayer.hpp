@@ -7,6 +7,8 @@ class HumanPlayer : public Player {
   public:
     Choice makeChoice();
     string getName();
+    void feedOpponentChoice(Choice choice);
+    void postGame();
 };
 
 #endif

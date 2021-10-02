@@ -2,7 +2,7 @@
 
 int main() {
     HumanPlayer p1;
-    ComputerPlayer p2(RandomChooser::NAME);
+    ComputerPlayer p2(MLChooser::NAME);
     Game game(p1, p2);
     game.start();
     return 0;

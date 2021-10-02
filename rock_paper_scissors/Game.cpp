@@ -19,6 +19,8 @@ void Game::start() {
         Choice choice2 = p2.makeChoice();
         cout << "Player 1 choose " << choice1 << endl;
         cout << "Player 2 choose " << choice2 << endl;
+        p1.feedOpponentChoice(choice2);
+        p2.feedOpponentChoice(choice1);
         if (choice1 == choice2) {
             cout << "Tie" << endl;
         } else if (choice1 > choice2) {
@@ -28,4 +30,6 @@ void Game::start() {
         }
         cout << "==========================" << endl;
     }
+    p1.postGame();
+    p2.postGame();
 }

@@ -33,4 +33,10 @@ inline bool operator > (Choice choice1, Choice choice2) {
     return choice2 == PAPER;
 }
 
+inline string toOneChar(Choice choice) {
+    if (choice == ROCK)    return "R";
+    if (choice == PAPER)   return "P";
+    return "S";
+}
+
 #endif

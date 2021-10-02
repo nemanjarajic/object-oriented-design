@@ -7,6 +7,8 @@ class RandomChooser : public Chooser {
   public:
     static string NAME;
     Choice makeChoice();
+    void feedOpponentChoice(Choice choice);
+    void postGame();
 };
 
 #endif

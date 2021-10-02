@@ -9,7 +9,8 @@ class ComputerPlayer : public Player {
     ComputerPlayer(string chooserName);
     Choice makeChoice();
     string getName();
-
+    void feedOpponentChoice(Choice choice);
+    void postGame();
   private:
     Chooser* chooser;
 };

@@ -6,5 +6,7 @@
 class Chooser {
   public:
     virtual Choice makeChoice();
+    virtual void feedOpponentChoice(Choice choice);
+    virtual void postGame();
 };
 #endif

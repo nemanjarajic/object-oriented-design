@@ -19,3 +19,11 @@ Choice HumanPlayer::makeChoice() {
 string HumanPlayer::getName() {
     return "Human";
 }
+
+void HumanPlayer::feedOpponentChoice(Choice choice) {
+
+}
+
+void HumanPlayer::postGame() {
+    
+}
