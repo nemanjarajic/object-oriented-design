@@ -12,6 +12,7 @@ class MLChooser : public Chooser {
     Choice makeChoice();
     void feedOpponentChoice(Choice choice);
     void postGame();
+    string getName();
   private:
     string curSequence;
     void initFrequencyMap(int n, string sequence);

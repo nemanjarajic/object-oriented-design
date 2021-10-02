@@ -89,3 +89,7 @@ void MLChooser::loadFile() {
     }
     ifs.close();
 }
+
+string MLChooser::getName() {
+    return "Machine Learning Chooser";
+}

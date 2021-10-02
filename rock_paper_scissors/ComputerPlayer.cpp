@@ -9,7 +9,7 @@ Choice ComputerPlayer::makeChoice() {
 }
 
 string ComputerPlayer::getName() {
-    return "Computer";
+    return "Computer with " + chooser->getName();
 }
 
 void ComputerPlayer::feedOpponentChoice(Choice choice) {

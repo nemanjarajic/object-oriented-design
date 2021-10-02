@@ -9,6 +9,7 @@ class RandomChooser : public Chooser {
     Choice makeChoice();
     void feedOpponentChoice(Choice choice);
     void postGame();
+    string getName();
 };
 
 #endif

@@ -13,3 +13,7 @@ void RandomChooser::feedOpponentChoice(Choice choice) {
 void RandomChooser::postGame() {
 
 }
+
+string RandomChooser::getName() {
+    return "Random Chooser";
+}

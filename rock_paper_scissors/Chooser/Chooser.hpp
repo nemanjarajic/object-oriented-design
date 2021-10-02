@@ -8,5 +8,6 @@ class Chooser {
     virtual Choice makeChoice();
     virtual void feedOpponentChoice(Choice choice);
     virtual void postGame();
+    virtual string getName();
 };
 #endif

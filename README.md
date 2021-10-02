@@ -6,5 +6,5 @@ San Jose State University CMPE 135 Object Oriented Analysis Design
 - Command line game implementing OOD principles
 - Each game has 20 rounds
 - Prompt the human player for each round’s choice of rock, paper, or scissors
-- The computer makes a random choice 
 - UML Diagram (Insert Link Later)
+- “-m" for machine learning chooser and "-r" for random chooser
