@@ -2,11 +2,16 @@
 #define COMPUTERPLAYER_H
 
 #include "Player.hpp"
+#include "ChooserFactory.hpp"
 
 class ComputerPlayer : public Player {
   public:
-    virtual Choice makeChoice();
-    virtual string getName();
+    ComputerPlayer(string chooserName);
+    Choice makeChoice();
+    string getName();
+
+  private:
+    Chooser* chooser;
 };
 
 #endif

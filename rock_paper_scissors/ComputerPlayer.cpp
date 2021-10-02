@@ -1,8 +1,11 @@
 #include "ComputerPlayer.hpp"
-#include <stdlib.h>
+
+ComputerPlayer::ComputerPlayer(string chooserName) {
+    chooser = ChooserFactory::makeChooser(chooserName);
+}
 
 Choice ComputerPlayer::makeChoice() {
-    return Choice(rand() % 3);
+    return chooser->makeChoice();
 }
 
 string ComputerPlayer::getName() {

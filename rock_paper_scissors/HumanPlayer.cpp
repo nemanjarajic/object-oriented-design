@@ -1,4 +1,3 @@
-
 #include "HumanPlayer.hpp"
 #include <iostream>
 #include <string>
